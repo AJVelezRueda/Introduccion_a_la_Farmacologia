@@ -12,8 +12,6 @@ This work is licensed under a
 
 ## TP1: Introducción a la farmacología
 
-**Marteria**: Diseño de Fármacos
-
 **Profesora**: Dra. Ana Julia Velez Rueda
 
 **Ejercicio 1**
