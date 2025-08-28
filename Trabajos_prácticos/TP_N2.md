@@ -38,23 +38,22 @@ Además, se utilizan filtros de “drug-likeness”, como las reglas de Lipinski
 
     f. Rotatable bonds
 
-3. Identificar subestructuras indeseables de los compuestos del punto 1.ay 1.b usando la plataforma FAF-Drugs4 (http://fafdrugs4.rpbs.univ-paris-diderot.fr)
+3. Identificar subestructuras indeseables de los compuestos del punto 1.ay 1.b usando la la siguiente módulo de python creado para tal fin siguiendo el tutorial:
 
-4. Realizar la predicción de propiedades fisicoquímicas de las moléulas obtenidas en el punto 1.a, mediante el uso de la herramienta admetSAR 2.0 (http://lmmd.ecust.edu.cn/admetsar2/). Obtener para las moléculas del punto 1.a y 1.b:
-    a. Absorption (intestinal, Caco-2).
+```python
+$ pip install rdkit-pypi molvs requests pandas numpy matplotlib seaborn
+$ pip install deepchem 
+$ python
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from admet_module import analisis_completo
+>>> mis_moleculas = {'molecula': 'COc1ccccc1C=O'}
+>>> resultados = analisis_completo(mis_moleculas)
+>>> print(resultados.keys())
+>>> print(resultados['propiedades'])
+```
 
-    b. Distribution (BBB penetration, plasma binding).
-
-    c. Metabolism (CYP interactions).
-
-    d. Excretion (renal clearance).
-
-    e. Toxicity (mutagenicidad, hepatotoxicidad, carcinogenicidad).
-
-    RESPONDER: ¿Qué diferencias se observan en la absorción intestinal entre moléculas conocidas y experimentales? 
-    Si una molécula muestra buen perfil ADMET pero tiene alertas PAINS, ¿la descartarías o la estudiarías igual?
-
-5. Realizar la predicción de toxicidad in silico utilizando ProTox-II (https://tox-new.charite.de/protox_II/). Utilizando los SMILES de moléculas del punto 1.a y 1.b, obtener: 
+4. Realizar la predicción de toxicidad in silico utilizando ProTox-II (https://tox-new.charite.de/protox_II/). Utilizando los SMILES de moléculas del punto 1.a y 1.b, obtener: 
 
     a. Predicted LD50 (mg/kg) y clase de toxicidad (I–VI).
 
@@ -62,4 +61,4 @@ Además, se utilizan filtros de “drug-likeness”, como las reglas de Lipinski
 
     ¿Cuál de las moléculas seleccionadas muestra menor toxicidad según ProTox-II?
 
-6. Construir una ficha técnica de cada compuesto que considere las respuestas a lassiguientes preguntas: ¿Qué compuestos cumplen mejor con los filtros de Lipinski y Veber? ¿Aparecieron moléculas con alertas PAINS? ¿Cuál es su toxicidad?
+5. Construir una ficha técnica de cada compuesto que considere las respuestas a las siguientes preguntas: ¿Qué compuestos cumplen mejor con los filtros de Lipinski y Veber? ¿Aparecieron moléculas con alertas PAINS? ¿Cuál es su toxicidad?
