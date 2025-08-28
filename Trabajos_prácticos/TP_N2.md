@@ -20,7 +20,7 @@ Además, se utilizan filtros de “drug-likeness”, como las reglas de Lipinski
 
 ### CONSIGNAS PRÁCTICOS
 1. Selección de compuestos:
-    a. Ingresar a PubChem (https://pubchem.ncbi.nlm.nih.gov)[https://pubchem.ncbi.nlm.nih.gov]. 
+    a. Ingresar a PubChem (https://pubchem.ncbi.nlm.nih.gov). 
     Utilizar la barra de búsqueda, para encontrar información de los siguientes compuesto: aspirin, paracetamol y caffeine. Obtener el “Canonical SMILES” del compuesto para los pasos anteriores
 
     b. Seleccionar 3 fármacos conocidos y 2 experimentales utilizando las palabras clave: anticancer candidate, natural product, experimental drug.
