@@ -36,28 +36,43 @@ Utilizando **PubChem Sketcher** (https://pubchem.ncbi.nlm.nih.gov/edit3/index.ht
 ¿Qué motivo estructural comparten todos los compuestos? ("andamiaio" o scaffold común) ¿Qué sustituyentes (grupos químicos) están presentes en diferentes posiciones?
 
 ### 3. Compareción de compuestos por pares
+
   a. **CMP-1 vs CMP-2**: ¿Qué diferencia estructural hay? ¿Qué grupo parece crucial para aumentar la actividad?
+
   b. **CMP-2 vs CMP-3**: ¿Qué nuevo grupo añade CMP-3? ¿Qué efecto tiene en la actividad?
-  c. **CMP-4**: Tiene el nuevo grupo de CMP-3 pero el grupo problemático de CMP-1. ¿Confirma esto sus ideas?
+
+  c. **CMP-4**: Tiene el nuevo grupo de CMP-3 pero el grupo problemático de CMP-1 
+
   d. **CMP-5 y CMP-6**: ¿Qué tienen en común sus sustituciones con la de CMP-3?
 
 ### 4. Diseñar un nuevo compuesto  análogo (CMP-7)
 Proponer un modelo farmacofórico simple que incluya:
+
 - Un grupo funcional específico necesario para la unión
+
 - Una región hidrofóbica o área que tolere sustituciones voluminosas con carácter electrónico-atrayente (halógenos, nitrilo)
+
 - Scaffold común
+
 - Grupo funcional crucial
+
 - Nuevo sustituyente que boostea la actividad
 
 ### 5. Predecir propiedades (ADME) del compuesto CMP-7
 - Dibujar CMP-7 en PubChem Sketcher y copiar su SMILES
 - Usando el módulo admet_module del TP2 analizar:
+
   * ¿Cumple con la Regla de Lipinski?
+
   * ¿Tiene buena solubilidad?
+
   * ¿Es probable que sea absorbida por vía oral?
 
 ## 6. Preguntas para Reflexión
 a. ¿Cuáles son las ventajas principales de este enfoque (basado en ligando) frente a uno que requiere la estructura de la proteína?
+
 b. ¿Cuál es la gran limitación de este método? (Pista: ¿Qué pasa si no tenemos compuestos activos para empezar?)
+
 c. Si tuvieran que probar solo 2 compuestos en un costoso ensayo biológico, ¿elegirían probar CMP-1 y CMP-2? ¿Por qué sí o por qué no?
+
 d. ¿Por qué CMP-7 sería más activo? ¿Sería un buen fármaco oral basándose en las predicciones? Justificar
