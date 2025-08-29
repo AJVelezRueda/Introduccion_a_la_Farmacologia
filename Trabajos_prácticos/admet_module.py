@@ -1,11 +1,23 @@
 import warnings
-import pandas as pd
-from rdkit import Chem
-from rdkit.Chem import Descriptors, Lipinski
-from rdkit.Chem.FilterCatalog import FilterCatalog, FilterCatalogParams
+import sys
+import os
+from io import StringIO
 
-warnings.filterwarnings("ignore", category=RuntimeWarning, 
-                        message=".*boost::shared_ptr<RDKit::FilterHierarchyMatcher>.*")
+warnings.filterwarnings("ignore")
+os.environ['PYTHONWARNINGS'] = 'ignore'
+
+old_stderr = sys.stderr
+sys.stderr = StringIO()
+
+try:
+    import pandas as pd
+    from rdkit import Chem
+    from rdkit.Chem import Descriptors, Lipinski
+    from rdkit.Chem.FilterCatalog import FilterCatalog, FilterCatalogParams
+finally:
+    sys.stderr = old_stderr
+
+
 def calculate_properties(smiles_dict):
     """
     Calcula propiedades fisicoquímicas para moléculas
@@ -42,6 +54,7 @@ def calculate_properties(smiles_dict):
             properties_list.append(props)
         else:
             print(f"SMILES inválido para {name}: {smiles}")
+            pass
     
     return pd.DataFrame(properties_list)
 
@@ -85,6 +98,8 @@ def run_admet_predictions(smiles_dict):
         admet = predict_admet(smiles)
         if admet:
             results.append({'Name': name, **admet})
+        else:
+            pass
     return pd.DataFrame(results)
 
 def check_undesirable_substructures(smiles_dict):
@@ -191,42 +206,42 @@ def generate_compound_cards(smiles_dict):
         pains = pains_df[pains_df['Name'] == name].iloc[0]
         
         card = f"""
-{'='*60}
-FICHA TÉCNICA: {name.upper()}
-{'='*60}
-SMILES: {props['SMILES']}
+        {'='*60}
+        FICHA TÉCNICA: {name.upper()}
+        {'='*60}
+        SMILES: {props['SMILES']}
 
-PROPIEDADES:
-- Peso molecular: {props['MW']:.2f} Da
-- LogP: {props['LogP']:.2f}
-- Donores H: {props['HBD']}
-- Aceptores H: {props['HBA']}
-- TPSA: {props['TPSA']:.2f} Å²
-- Enlaces rotables: {props['RotatableBonds']}
+        PROPIEDADES:
+        - Peso molecular: {props['MW']:.2f} Da
+        - LogP: {props['LogP']:.2f}
+        - Donores H: {props['HBD']}
+        - Aceptores H: {props['HBA']}
+        - TPSA: {props['TPSA']:.2f} Å²
+        - Enlaces rotables: {props['RotatableBonds']}
 
-LIPINSKI:
-- Violaciones: {props['Lipinski_Violations']}/4
-- Cumplimiento: {'Sí' if props['Lipinski_Violations'] <= 1 else 'No'}
+        LIPINSKI:
+        - Violaciones: {props['Lipinski_Violations']}/4
+        - Cumplimiento: {'Sí' if props['Lipinski_Violations'] <= 1 else 'No'}
 
-ADMET:
-- Absorción: {admet['Absorption']}
-- Penetración BBB: {admet['BBB_Penetration']}
-- Unión a proteínas: {admet['Plasma_Binding']}
-- Inhibición CYP: {admet['CYP_Inhibition']}
-- Clearance renal: {admet['Renal_Clearance']}
+        ADMET:
+        - Absorción: {admet['Absorption']}
+        - Penetración BBB: {admet['BBB_Penetration']}
+        - Unión a proteínas: {admet['Plasma_Binding']}
+        - Inhibición CYP: {admet['CYP_Inhibition']}
+        - Clearance renal: {admet['Renal_Clearance']}
 
-TOXICIDAD:
-- Alertas: {tox['Toxicity_Alerts']}
-- Toxicidad: {tox['Predicted_Toxicity']}
-- LD50: {tox['Estimated_LD50']}
+        TOXICIDAD:
+        - Alertas: {tox['Toxicity_Alerts']}
+        - Toxicidad: {tox['Predicted_Toxicity']}
+        - LD50: {tox['Estimated_LD50']}
 
-ALERTAS:
-- PAINS: {pains['PAINS_Alerts']} alertas
-{'='*60}
-        """
+        ALERTAS:
+        - PAINS: {pains['PAINS_Alerts']} alertas
+        {'='*60}
+                """
         cards.append(card)
-    
-    return cards
+            
+        return cards
 
 def analisis_completo(smiles_dict):
     """
