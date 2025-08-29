@@ -53,7 +53,6 @@ def calculate_properties(smiles_dict):
             }
             properties_list.append(props)
         else:
-            print(f"SMILES inválido para {name}: {smiles}")
             pass
     
     return pd.DataFrame(properties_list)
