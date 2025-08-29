@@ -59,8 +59,9 @@ Proponer un modelo farmacofórico simple que incluya:
 - Nuevo sustituyente que boostea la actividad
 
 ### 5. Predecir propiedades (ADME) del compuesto CMP-7
-- Dibujar CMP-7 en PubChem Sketcher y copiar su SMILES
-- Usando el módulo admet_module del TP2 analizar:
+a. Dibujar CMP-7 en PubChem Sketcher y copiar su SMILES
+
+b. Usando el módulo admet_module del TP2 analizar:
 
   * ¿Cumple con la Regla de Lipinski?
 
