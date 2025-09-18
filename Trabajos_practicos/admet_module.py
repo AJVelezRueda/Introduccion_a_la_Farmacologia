@@ -2,6 +2,7 @@ import warnings
 import sys
 import os
 from io import StringIO
+from rdkit.Chem.Scaffolds import MurckoScaffold
 
 warnings.filterwarnings("ignore")
 os.environ['PYTHONWARNINGS'] = 'ignore'
@@ -242,6 +243,35 @@ def generate_compound_cards(smiles_dict):
             
         return cards
 
+def get_scaffolds(smiles_dict):
+    """
+    Extrae el scaffold (andamiaje Bemis–Murcko) de cada molécula
+    
+    Args:
+        smiles_dict (dict): {nombre: SMILES}
+    
+    Returns:
+        pd.DataFrame con los scaffolds
+    """
+    results = []
+    for name, smiles in smiles_dict.items():
+        mol = Chem.MolFromSmiles(smiles)
+        if mol:
+            scaffold = MurckoScaffold.GetScaffoldForMol(mol)
+            scaffold_smiles = Chem.MolToSmiles(scaffold) if scaffold else None
+            results.append({
+                'Name': name,
+                'SMILES': smiles,
+                'Scaffold_SMILES': scaffold_smiles
+            })
+        else:
+            results.append({
+                'Name': name,
+                'SMILES': smiles,
+                'Scaffold_SMILES': None
+            })
+    return pd.DataFrame(results)
+
 def analisis_completo(smiles_dict):
     """
     Función de ejecución del análisis completo de un diccionario de moléculas
@@ -257,7 +287,8 @@ def analisis_completo(smiles_dict):
         'admet': run_admet_predictions(smiles_dict),
         'toxicidad': predict_toxicity_batch(smiles_dict),
         'pains': check_undesirable_substructures(smiles_dict),
-        'fichas': generate_compound_cards(smiles_dict)
+        'fichas': generate_compound_cards(smiles_dict),
+        'scaffolds': get_scaffolds(smiles_dict)
     }
 
 if __name__ == "__main__":

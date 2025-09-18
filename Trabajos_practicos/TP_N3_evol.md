@@ -81,19 +81,35 @@ Usando el alineamiento del punto I.d construí un árbol filogenético mediante 
 **🧗🏻‍♀️ DESAFÍO III: Anotación de blancos moleculares**
 
 
-Consulta en bases de datos como **ChEMBL** o **DrugBank** para identificar fármacos que se unan a la albúmina humana.  
+1. Consulta en bases de datos **ChEMBL** y **DrugBank** para identificar fármacos que se unan a la **albúmina humana (HSA)**.  
 
-  a. ¿Qué tipo de moléculas suelen interactuar con la HSA?  
+   a. ¿Qué tipo de moléculas suelen interactuar con la HSA?  
+   b. ¿Qué importancia biomédica tiene esta interacción?  
+   c. ¿Qué diferencias se reportan entre la unión de fármacos en la albúmina humana y la bovina?  
+   d. ¿Cuáles son las principales diferencias entre especies en dichas regiones de interés?
 
-  b. ¿Qué importancia biomédica tiene esta interacción?  
 
-  c. ¿Qué diferencias se reportan entre la unión de fármacos en la albúmina humana y la bovina?
+2. **Identificar características comunes**  
+A partir de los compuestos encontrados:
 
-  d. ¿Cuáles son las principales diferencias entre especies en dichas regiones de interés?
+     a. ¿Qué **motivo estructural (“andamiaje” o scaffold común)** comparten?  Podés usar el módulo admet:
+     ```python
+        moleculas = {
+            'CMP-1': 'CC1=CC=CC=C1O',
+            'CMP-2': 'CCOc1ccc2nc(SCc3ccccc3)sc2c1',
+        }
+
+        resultados = analisis_completo(moleculas)
+
+        print(resultados['scaffolds'])
+     ```
+
+     b. ¿Qué **sustituyentes (grupos químicos)** están presentes en diferentes posiciones?  
+     
+     c. ¿Qué diferencias y similitudes estructurales hay entre estos compuestos? ¿Cómo crees que deben ser las distintas proteínas en los sitios capaces de transportarlos? 
 
 
 **🧗🏻‍♀️ DESAFÍO IV: Identificación de sitios de interés**
-
 
 Utilizando las bases de datos [Uniprot](https://www.uniprot.org/) e [InterPro](https://www.ebi.ac.uk/interpro/) para identificar dominios y motivos conservados en la HSA.  
   
