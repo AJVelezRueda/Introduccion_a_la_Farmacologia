@@ -23,7 +23,9 @@ Las albúminas son las proteínas sanguíneas más abundantes en los mamíferos 
 
 A lo largo de los vertebrados, las albúminas se conservan evolutivamente, aunque muestran una notable diversidad estructural.
 
+
 **🧗🏻‍♀️ DESAFÍO I: Asignación por homología**
+
 
 Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contra la base de datos de proteínas de vertebrados.  
  
@@ -42,7 +44,9 @@ Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contr
   g. ¿Qué diferencias observas en las regiones cercanas a los sitios de unión?
 
 
+
 **🧗🏻‍♀️ DESAFÍO II:**
+
 
 Usando el alineamiento del punto I.d construí un árbol filogenético mediante la herramienta [IQ-tree](https://iqtree.github.io/)
 
@@ -73,7 +77,10 @@ Usando el alineamiento del punto I.d construí un árbol filogenético mediante 
     * Alignment.fasta.iqtree → información sobre el modelo y parámetros usados.
 </details>
 
+
 **🧗🏻‍♀️ DESAFÍO III: Anotación de blancos moleculares**
+
+
 Consulta en bases de datos como **ChEMBL** o **DrugBank** para identificar fármacos que se unan a la albúmina humana.  
 
   a. ¿Qué tipo de moléculas suelen interactuar con la HSA?  
@@ -86,6 +93,7 @@ Consulta en bases de datos como **ChEMBL** o **DrugBank** para identificar fárm
 
 
 **🧗🏻‍♀️ DESAFÍO IV: Identificación de sitios de interés**
+
 
 Utilizando las bases de datos [Uniprot](https://www.uniprot.org/) e [InterPro](https://www.ebi.ac.uk/interpro/) para identificar dominios y motivos conservados en la HSA.  
   
