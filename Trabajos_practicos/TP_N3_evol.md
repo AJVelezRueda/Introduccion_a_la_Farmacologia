@@ -50,9 +50,9 @@ Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contr
 
 Usando el alineamiento del punto I.d construí un árbol filogenético mediante la herramienta [IQ-tree](https://iqtree.github.io/)
 
-    a. Visualiza el árbol usando [iTOL](https://itol.embl.de/) o [FigTree](https://tree.bio.ed.ac.uk/software/figtree/)
+  a. Visualiza el árbol usando [iTOL](https://itol.embl.de/) o [FigTree](https://tree.bio.ed.ac.uk/software/figtree/)
 
-    b. Estudiá los clados y relacionalo con las observaciones del punto anterior
+  b. Estudiá los clados y relacionalo con las observaciones del punto anterior
 
 <details>
 <summary>Instrucciones de instalación de IQ-TREE</summary>
