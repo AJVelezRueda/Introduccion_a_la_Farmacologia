@@ -20,20 +20,15 @@ Se midió la actividad inhibidora (IC₅₀) de 6 compuestos análogos contra un
 
 | Compuesto | Estructura (SMILES) | IC₅₀ (nM) | Actividad |
 |-----------|---------------------|-----------|-----------|
-| CMP-1 | `C1=CC(=CC=C1CCO)O` | 1000 | Baja |
-| CMP-2 | `C1=CC(=CC=C1CCN)O` | 100 | Media |
-| CMP-3 | `C1=CC(=CC=C1CCN)C(F)(F)F` | 10 | Alta |
-| CMP-4 | `C1=CC(=CC=C1CCO)C(F)(F)F` | 500 | Baja |
-| CMP-5 | `C1=CC(=CC=C1CCN)C#N` | 25 | Alta |
-| CMP-6 | `C1=CC(=CC=C1CCN)CCl` | 50 | Alta |
+| CMP-1 | `CC(CCCCC)C(O)CCCC(=O)O` | 1200 | Baja |
+| CMP-2 | `CC(CC(CC)C)C(O)CCCC(=O)N` | 200 | Media |
+| CMP-3 | `CC(C)CC(CCC)C(O)CCCC(F)(F)F` | 15 | Alta |
+| CMP-4 | `CC(CCCCC)C(O)CCCC(=O)O[C@@H]1O[C@H](N)C(=O)C1` | 600 | Baja |
+| CMP-5 | `CC(CCN)C(O)CCCC(=O)C#N` | 30 | Alta |
+| CMP-6 | `CC(CCCl)C(O)CCCC(=O)Cl` | 45 | Alta |
 
-## Visualización y Comparación de Estructuras
-
-### 1. Dibujar las moléculas
-Utilizando **PubChem Sketcher** (https://pubchem.ncbi.nlm.nih.gov/edit3/index.html) o **MolView** (https://molview.org/), dibujar cada uno de los 6 compuestos usando sus códigos SMILES
-
-### 2. Identificar características comunes
-¿Qué motivo estructural comparten todos los compuestos? ("andamiaio" o scaffold común) ¿Qué sustituyentes (grupos químicos) están presentes en diferentes posiciones?
+### 1. Identificar características comunes
+a. ¿Qué motivo estructural comparten todos los compuestos? ("andamiaio" o scaffold común) ¿Qué sustituyentes (grupos químicos) están presentes en diferentes posiciones?
 
 ### 3. Compareción de compuestos por pares
 
@@ -70,10 +65,38 @@ b. Usando el módulo admet_module del TP2 analizar:
   * ¿Es probable que sea absorbida por vía oral?
 
 ## 6. Preguntas para Reflexión
-a. ¿Cuáles son las ventajas principales de este enfoque (basado en ligando) frente a uno que requiere la estructura de la proteína?
+a. ¿Cuáles son las ventajas principales del enfoque basado en ligando frente a uno que requiere la estructura de la proteína?
 
-b. ¿Cuál es la gran limitación de este método? (Pista: ¿Qué pasa si no tenemos compuestos activos para empezar?)
+b. ¿Cuál es la gran limitación de este método?
 
 c. Si tuvieran que probar solo 2 compuestos en un costoso ensayo biológico, ¿elegirían probar CMP-1 y CMP-2? ¿Por qué sí o por qué no?
 
-d. ¿Por qué CMP-7 sería más activo? ¿Sería un buen fármaco oral basándose en las predicciones? Justificar
+## 7. Búsqueda de Blancos moleculares
+Dada la secuencia:
+
+```
+>sp|P0A722|LPXA_ECOLI Acyl-[acyl-carrier-protein]--UDP-N-acetylglucosamine O-acyltransferase OS=Escherichia coli (strain K12) GN=lpxA PE=1 SV=1
+MIDKSAFVHPTAIVEEGASIGANAHIGPFCIVGPHVEIGEGTVLKSHVVVNGHTKIGRDNEIYQFASIGEVNQDLKYAGEPTRVEIGDRNRIRESVTIHRGTVQGGGLTKVGSDNLLMINAHIAHDCTVGNRCILANNATLAGHVSVDDFAIIGGMTAVHQFCIIGAHVMVGGCSGVAQDVPPYVIAQGNHATPFGVNIEGLKRRGFSREAITAIRNAYKLIYRSGKTLDEVKPEIAELAETYPEVKAFTDFFARSTRGLIR
+```
+Consignar todos los homólogos cercanos con estructura conocida. Responder
+
+a- ¿Cuáles son las herramientas y configuraciones necesarias para tal fin?
+b- ¿Existen regiones proteicas con mayor consevación?
+c -¿Existen regiones proteicas con mayor consevación?¿Coinciden con regiones de relevancia biológica?
+
+## 8. Cálculo de similitud química de los compuestos canónicos con los candidatos
+
+Usando la biblioteca admet_module, calcular las similitud con los ligandos elegidos en el punto 1 y 2 y los ligandos canónicos de la proteína del punto 7:
+
+```python
+# Ejemplo de corrida
+moleculas = {
+    "CMP-1": "CC(CCCCC)C(O)CCCC(=O)O",
+    "CMP-2": "CC(CC(CC)C)C(O)CCCC(=O)N"
+}
+
+ligando_canonico = "CCCCCCCCCCCCCC(O)C(=O)O"
+
+df_tanimoto = calculate_tanimoto_similarity(moleculas, ligando_canonico)
+print(df_tanimoto)
+```

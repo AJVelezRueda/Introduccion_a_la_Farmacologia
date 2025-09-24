@@ -3,6 +3,7 @@ import sys
 import os
 from io import StringIO
 from rdkit.Chem.Scaffolds import MurckoScaffold
+from rdkit.Chem import AllChem, DataStructs
 
 warnings.filterwarnings("ignore")
 os.environ['PYTHONWARNINGS'] = 'ignore'
@@ -242,6 +243,43 @@ def generate_compound_cards(smiles_dict):
         cards.append(card)
             
         return cards
+
+def calculate_tanimoto_similarity(smiles_dict, reference_smiles):
+    """
+    Calcula la similitud de Tanimoto entre un conjunto de moléculas y un ligando de referencia.
+    
+    Args:
+        smiles_dict (dict): {nombre: SMILES}
+        reference_smiles (str): SMILES del ligando de referencia
+    
+    Returns:
+        pd.DataFrame con las similitudes Tanimoto
+    """
+    results = []
+    ref_mol = Chem.MolFromSmiles(reference_smiles)
+    if not ref_mol:
+        raise ValueError("El SMILES de referencia no es válido")
+    
+    ref_fp = AllChem.GetMorganFingerprintAsBitVect(ref_mol, 2, nBits=2048)
+    
+    for name, smiles in smiles_dict.items():
+        mol = Chem.MolFromSmiles(smiles)
+        if mol:
+            fp = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=2048)
+            tanimoto = DataStructs.TanimotoSimilarity(ref_fp, fp)
+            results.append({
+                'Name': name,
+                'SMILES': smiles,
+                'Tanimoto_vs_Reference': tanimoto
+            })
+        else:
+            results.append({
+                'Name': name,
+                'SMILES': smiles,
+                'Tanimoto_vs_Reference': None
+            })
+    
+    return pd.DataFrame(results)
 
 def get_scaffolds(smiles_dict):
     """
