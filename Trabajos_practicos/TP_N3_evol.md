@@ -37,12 +37,9 @@ Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contr
 
   d. **Obtené secuencias de albúminas** de al menos 20–30 especies diferentes de mamíferos desde **UniProt** y construí un alineamiento de proteínas ortólogas usando [Clustal Omega]. 
 
-  e. ¿Qué porcentaje de identidad comparten?  
+  e. ¿Qué porcentaje de identidad comparten en promedio?
 
-  f. ¿Qué regiones se encuentran más conservadas?  
-
-  g. ¿Qué diferencias observas en las regiones cercanas a los sitios de unión?
-
+  f. ¿Qué regiones se encuentran más conservadas?
 
 
 **🧗🏻‍♀️ DESAFÍO II:**
