@@ -30,7 +30,7 @@ Se midió la actividad inhibidora (IC₅₀) de 6 compuestos análogos contra un
 ### 1. Identificar características comunes
 a. ¿Qué motivo estructural comparten todos los compuestos? ("andamiaio" o scaffold común) ¿Qué sustituyentes (grupos químicos) están presentes en diferentes posiciones?
 
-### 3. Compareción de compuestos por pares
+### 2. Compareción de compuestos por pares
 
   a. **CMP-1 vs CMP-2**: ¿Qué diferencia estructural hay? ¿Qué grupo parece crucial para aumentar la actividad?
 
@@ -40,7 +40,7 @@ a. ¿Qué motivo estructural comparten todos los compuestos? ("andamiaio" o scaf
 
   d. **CMP-5 y CMP-6**: ¿Qué tienen en común sus sustituciones con la de CMP-3?
 
-### 4. Diseñar un nuevo compuesto  análogo (CMP-7)
+### 3. Diseñar un nuevo compuesto  análogo (CMP-7)
 Proponer un modelo farmacofórico simple que incluya:
 
 - Un grupo funcional específico necesario para la unión
@@ -53,7 +53,7 @@ Proponer un modelo farmacofórico simple que incluya:
 
 - Nuevo sustituyente que boostea la actividad
 
-### 5. Predecir propiedades (ADME) del compuesto CMP-7
+### 4. Predecir propiedades (ADME) del compuesto CMP-7
 a. Dibujar CMP-7 en PubChem Sketcher y copiar su SMILES
 
 b. Usando el módulo admet_module del TP2 analizar:
@@ -64,14 +64,14 @@ b. Usando el módulo admet_module del TP2 analizar:
 
   * ¿Es probable que sea absorbida por vía oral?
 
-## 6. Preguntas para Reflexión
+## 5. Preguntas para Reflexión
 a. ¿Cuáles son las ventajas principales del enfoque basado en ligando frente a uno que requiere la estructura de la proteína?
 
 b. ¿Cuál es la gran limitación de este método?
 
 c. Si tuvieran que probar solo 2 compuestos en un costoso ensayo biológico, ¿elegirían probar CMP-1 y CMP-2? ¿Por qué sí o por qué no?
 
-## 7. Búsqueda de Blancos moleculares
+## 6. Búsqueda de Blancos moleculares
 Dada la secuencia:
 
 ```
@@ -84,7 +84,7 @@ a- ¿Cuáles son las herramientas y configuraciones necesarias para tal fin?
 b- ¿Existen regiones proteicas con mayor consevación?
 c -¿Existen regiones proteicas con mayor consevación?¿Coinciden con regiones de relevancia biológica?
 
-## 8. Cálculo de similitud química de los compuestos canónicos con los candidatos
+## 7. Cálculo de similitud química de los compuestos canónicos con los candidatos
 
 Usando la biblioteca admet_module, calcular las similitud con los ligandos elegidos en el punto 1 y 2 y los ligandos canónicos de la proteína del punto 7:
 
