@@ -19,7 +19,7 @@ This work is licensed under a
 
 ## Introducción
 
-Las albúminas son las proteínas sanguíneas más abundantes en los mamíferos y cumplen la función principal de unir y transportar diversos compuestos endógenos y exógenos, en su mayoría hidrofóbicos. Esta proteína globular está compuesta por tres dominios homólogos (I, II y III), cada uno de los cuales contiene dos subdominios similares (A y B).  Esto la hace una una proteína de interés farmacológico ya que se encuentra involucrada en el en el reparto (delivery) de fármacos.
+Las albúminas son las proteínas sanguíneas más abundantes en los mamíferos y cumplen la función principal de unir y transportar diversos compuestos endógenos y exógenos, en su mayoría hidrofóbicos. Esta proteína globular está compuesta por tres dominios homólogos (I, II y III), cada uno de los cuales contiene dos subdominios similares (A y B). En particular, los residuos Lys 199, Arg 410, Tyr 411, Cys 34 y Lys 195 de HSA se describen como algunos de los importantes, no solo para la unión del ligando sino también para la catálisis. Esto la hace una una proteína de interés farmacológico ya que se encuentra involucrada en el en el reparto (delivery) de fármacos.
 
 A lo largo de los vertebrados, las albúminas se conservan evolutivamente, aunque muestran una notable diversidad estructural.
 
@@ -35,7 +35,7 @@ Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contr
 
   c. ¿Podrías identificar al menos **dos ortólogos** y **dos parálogos** en la familia de albúminas?
 
-  d. **Obtené secuencias de albúminas** de al menos 8–10 especies diferentes de mamíferos desde **UniProt** y construí un alineamiento de proteínas ortólogas usando [Clustal Omega]. 
+  d. **Obtené secuencias de albúminas** de al menos 20–30 especies diferentes de mamíferos desde **UniProt** y construí un alineamiento de proteínas ortólogas usando [Clustal Omega]. 
 
   e. ¿Qué porcentaje de identidad comparten?  
 
@@ -81,7 +81,7 @@ Usando el alineamiento del punto I.d construí un árbol filogenético mediante 
 **🧗🏻‍♀️ DESAFÍO III: Anotación de blancos moleculares**
 
 
-1. Consulta en bases de datos **ChEMBL** y **DrugBank** para identificar fármacos que se unan a la **albúmina humana (HSA)**.  
+1. Consulta en bases de datos **ChEMBL** y **DrugBank** para identificar fármacos que se unan a la **albúmina humana (HSA)**.  Complementá tus hallazgos con lo descrito en la publicación "[Albumin is a reliable drug-delivering molecule: Highlighting points in cancer therapy](https://www.sciencedirect.com/science/article/pii/S2590098624000113)"
 
    a. ¿Qué tipo de moléculas suelen interactuar con la HSA?  
    b. ¿Qué importancia biomédica tiene esta interacción?  
@@ -115,11 +115,11 @@ Utilizando las bases de datos [Uniprot](https://www.uniprot.org/) e [InterPro](h
   
   a. ¿Cuáles son los dominios principales identificados?  
 
-  b. ¿Coinciden con los sitios conocidos de unión a ligandos?  
+  b. ¿Coinciden con los sitios conocidos de unión a ligandos descriptos en la introducción?
 
   c. ¿Qué residuos resultan altamente conservados en ortólogos y podrían ser críticos para la función?
 
-  d. ¿Cómo se distribuyen los dominios principales a lo largo del árbol?
+  d. ¿Cómo se distribuyen los dominios principales a lo largo del árbol? Equipará el árbol al alineamiento para ver la distribución de las variantes de los sitios en el árbol.
 
   e. ¿Existen evidencias de interferencias farmacológicas o promiscuidad proteica de impacto farmacológico para la HSA?
 
