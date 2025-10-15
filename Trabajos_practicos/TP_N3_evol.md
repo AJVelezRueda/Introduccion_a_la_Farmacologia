@@ -14,9 +14,6 @@ This work is licensed under a
 
 **Profesora**: Dra. Ana Julia Velez Rueda
 
-
-# Trabajo Práctico: Evolución y Anotación Funcional de Proteínas
-
 ## Introducción
 
 Las albúminas son las proteínas sanguíneas más abundantes en los mamíferos y cumplen la función principal de unir y transportar diversos compuestos endógenos y exógenos, en su mayoría hidrofóbicos. Esta proteína globular está compuesta por tres dominios homólogos (I, II y III), cada uno de los cuales contiene dos subdominios similares (A y B). En particular, los residuos Lys 199, Arg 410, Tyr 411, Cys 34 y Lys 195 de HSA se describen como algunos de los importantes, no solo para la unión del ligando sino también para la catálisis. Esto la hace una una proteína de interés farmacológico ya que se encuentra involucrada en el en el reparto (delivery) de fármacos.
