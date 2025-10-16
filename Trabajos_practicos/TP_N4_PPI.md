@@ -16,12 +16,23 @@ This work is licensed under a
 
 ### **Ejercicio 1: Construcción y Visualización de la Red PPI**
 
-1. Acceder a [STRING-db.org](https://string-db.org)
-2. Ingresar la lista de genes proporcionada
-3. Configurar organismo como _Homo sapiens_
-4. Ajustar parámetros de visualización
-5. Describa la topología de la red: ¿es densa o dispersa? ¿Identifica proteínas "hub"?
-6. ¿Cómo afecta el ajuste de confianza a la red? ¿Por qué es importante este filtro?
+Accedé a [STRING-db.org](https://string-db.org). Ingresá a la lista de genes dada:
+ ```
+    IL1B
+    IL6
+    TNF
+    PTGS2
+    NFkB1
+    CXCL8
+    TLR4
+    STAT3
+    MAPK14
+    RELA
+ ```
+ proporcionada y configurá organismo como _Homo sapiens_.
+1. Describí la topología de la red: ¿es densa o dispersa? Calculá el "degree"o cantidad de conexiones en la red según el score actual. 
+2. ¿Cuántas proteínas "Hub" identificás? 
+3. ¿Cómo afecta el ajuste de confianza a la red? ¿Por qué es importante este filtro?
 
 
 ### **Ejercicio 2: Análisis de Enriquecimiento Funcional**
