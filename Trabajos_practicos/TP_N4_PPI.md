@@ -37,10 +37,11 @@ Accedé a [STRING-db.org](https://string-db.org). Ingresá a la lista de genes d
 
 ### **Ejercicio 2: Análisis de Enriquecimiento Funcional**
 
-1. Explorar pestaña "Functional Enrichment"
-2. Analizar resultados en KEGG, Process y Function
-3. Liste las 3 vías KEGG más enriquecidas (nombre y valor FDR)
-4. ¿Qué procesos biológicos aparecen? ¿Coinciden con contexto de cáncer?
+Explorar pestaña "Functional Enrichment" y  analizar resultados en KEGG, Process y Function
+1. Listá las 3 vías KEGG más enriquecidas (nombre y valor FDR)
+2. ¿Qué procesos biológicos aparecen? ¿Coinciden con contexto de cáncer?
+3. Se llama **targets combinatorios** si dos o más proteínas están en la misma vía y son mediadores clave ¿Existen en la red proteínas que puedan ser targets combinatorios para una terapia más efectiva?
+4. Según GO Molecular Function ¿hay actividades o dominios específicos que sean aprovechables para diseñar inhibidores o activadores?
 
 
 ### **Ejercicio 3: Identificación y Priorización de Dianas**
@@ -49,7 +50,7 @@ Completar tabla de evaluación para 2 candidatos:
 
 | Criterio | Candidato 1 | Candidato 2 |
 |----------|-------------|-------------|
-| Posición en red (¿es "hub"?) | | |
+| Posición en red | | |
 | Evidencia en enfermedad | | |
 | Drogabilidad | | |
 | Participación en vías clave | | |
