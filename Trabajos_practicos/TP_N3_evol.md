@@ -32,7 +32,7 @@ Utiliza la secuencia de albúmina humana (HSA) como consulta en **BLASTp** contr
 
   c. ¿Podrías identificar al menos **dos ortólogos** y **dos parálogos** en la familia de albúminas?
 
-  d. **Obtené secuencias de albúminas** de al menos 20–30 especies diferentes de mamíferos desde **UniProt** y construí un alineamiento de proteínas ortólogas usando [Clustal Omega]. 
+  d. **Obtené secuencias de albúminas** de al menos 50–90 especies diferentes de mamíferos desde **UniProt** y construí un alineamiento de proteínas ortólogas usando [Clustal Omega]. 
 
   e. ¿Qué porcentaje de identidad comparten en promedio?
 
