@@ -19,8 +19,11 @@ This work is licensed under a
 
 El docking molecular es una técnica computacional utilizada para predecir la orientación y afinidad de unión entre una molécula pequeña (ligando) y una macromolécula receptora (target), como una proteína. Esta herramienta es fundamental en el diseño racional de fármacos, ya que permite estimar la energía de interacción entre el ligando y el sitio activo de la proteína, ayudando a identificar posibles compuestos con actividad biológica.
 
-### 1T. Investigar sobre 
-
+### 1T. Investigar sobre las técnicas de acoplamiento molecular
+Usando el libro [Bioinformática con Ñ](https://zenodo.org/records/1066358) describir los siguientes métodos y/o conceptos:
+  a. Docking Flexible
+  b. Docking Rígido
+  c. Virtual Screening
 
 ## Actividades prácticas
 
