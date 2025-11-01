@@ -37,7 +37,7 @@ Vamos a utilizar como Target la Anhydrasa Carbonica II humana. Descargá la estr
 ### 2P. Preparación de la corrida
 Eliminar moléculas de agua y el ligando original si corresponde. [Agregar hidrógenos](http://newbiophysics.cs.vt.edu/H++/) al receptor (pH fisiológico). Guardar receptor en formato compatible (.pdbqt o equivalente) Preparar los ligandos: minimización + conversión a formato compatible.
 
-Herramientas: [Propka](https://chatgpt.com/c/69013a7f-c3a4-832b-8e6c-5ae81ddb9286), [H++](http://newbiophysics.cs.vt.edu/H++/)
+Herramientas: [Propka](), [H++](http://newbiophysics.cs.vt.edu/H++/), [FpocketOnLine](),
 
 ### 3P. [Docking](https://durrantlab.pitt.edu/webina/?utm_source=chatgpt.com) comparativo
 
