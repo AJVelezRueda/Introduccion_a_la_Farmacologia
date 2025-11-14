@@ -37,17 +37,17 @@ Vamos a utilizar como Target la Anhydrasa Carbonica II humana. Descargá la estr
 ### 2P. Preparación de la corrida
 Eliminar moléculas de agua y el ligando original si corresponde. [Agregar hidrógenos](http://newbiophysics.cs.vt.edu/H++/) al receptor (pH fisiológico). Guardar receptor en formato compatible (.pdbqt o equivalente) Preparar los ligandos: minimización + conversión a formato compatible.
 
-Herramientas: [Propka](), [H++](http://newbiophysics.cs.vt.edu/H++/), [FpocketOnLine](),
+Herramientas: [Propka](https://propka.readthedocs.io/en/latest/), [H++](http://newbiophysics.cs.vt.edu/H++/), [Fpocket](https://durrantlab.pitt.edu/fpocketweb-download/),
 
-### 3P. [Docking](https://durrantlab.pitt.edu/webina/?utm_source=chatgpt.com) comparativo
+### 3P. [Docking](https://durrantlab.pitt.edu) comparativo
 
-a. Definir la [caja de docking](https://durrantlab.pitt.edu/webina/?utm_source=chatgpt.com) alrededor del Zn²⁺ y el sitio donde se une acetazolamida.
+a. Definir la [caja de docking](https://durrantlab.pitt.edu/) alrededor del Zn²⁺ y el sitio donde se une acetazolamida.
 b. Usando el programa  dockear en el sitio activo:
 - acetazolamida (control)
 - dorzolamida 
 - brinzolamida
 
-software alternativo: [SwissDock](https://www.swissdock.ch/?utm_source=chatgpt.com)
+software alternativo: [SwissDock](https://www.swissdock.ch)
 
 c. Registrar:
 Energía de unión (kcal/mol), Poses obtenidas, Principales interacciones (puentes H, interacción con Zn²⁺, contactos hidrofóbicos)
@@ -65,7 +65,7 @@ Cargar el archivo 3HS4.pdb en [Mol](https://molstar.org/viewer/) o Pymol, elimin
 Usando el servidos [pdb2pqr](https://server.poissonboltzmann.org/pdb2pqr) (Elegir pH = 7.0, seleccionar la opción “Add hydrogens” y descargar el archivo resultante CAII_H.pdb) o el software [OpenBabel](https://openbabel.org/index.html) localmente para agregar los hidrógenos.
 
 **4. Convertir a formato .pdbqt las estructuras pdb**
-Podés usar [Mol](https://molstar.org/viewer/), [NGL](https://nglviewer.org/ngl/) o [PLIP](https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index?utm_source=chatgpt.com)
+Podés usar [Mol](https://molstar.org/viewer/), [NGL](https://nglviewer.org/ngl/) o [PLIP](https://plip-tool.biotec.tu-dresden.de)
 
 **5. Correr el docking**
 Usando Webina, centrando la caja alrededor del átomo de Zn²⁺ (usá un tamaño de caja de aprox. 20 × 20 × 20 Å y verificar que incluye el sitio donde estaba la acetazolamida original), y descargar los resultados para analizar
